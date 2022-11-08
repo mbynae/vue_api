@@ -3,10 +3,6 @@
 		<HeaderCont />
 		<section class="main__cont">
 			<div class="main__inner">
-				<!-- <div>we provide</div>
-				<div>visual coding</div>
-				<div>solution</div>
-				<div>for you api</div> -->
 				<div v-for="title in titles" v-bind:key="title.text">
 					{{ title.text }}
 				</div>
