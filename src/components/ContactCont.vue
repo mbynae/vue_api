@@ -7,18 +7,39 @@
 </template>
 
 <style lang="scss">
-.main__inner {
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
+// cont__contact
+.cont__contact {
 	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 	color: var(--black);
+	text-transform: uppercase;
 
-	> div {
-		font-size: 8.5vw;
-		line-height: 0.9;
-		text-transform: uppercase;
+	p {
+		font-size: 20px;
+		font-family: var(--font-sub2);
+		margin-bottom: 20px;
+	}
+	h3 {
+		font-size: 10vw;
+		font-family: var(--font-main);
+		line-height: 1;
+		text-align: center;
+
+		em {
+			display: block;
+		}
+	}
+
+	a {
+		font-size: 16px;
+		font-family: var(--font-sub2);
+		border: 1px solid var(--black);
+		border-radius: 50px;
+		padding: 1vw;
+		color: var(--black);
 	}
 }
 </style>
