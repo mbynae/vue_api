@@ -10,9 +10,10 @@
 						<li v-for="refer in refers" :key="refer.title">
 							<a href="/">
 								<!-- <span>{{ refer.num }}</span> -->
-								<span>{{ refer.title }}</span>
-								<span>{{ refer.desc }}</span>
-								<span>{{ refer.star }}</span>
+								<span class="num">{{ refer.num }}</span>
+								<span class="name">{{ refer.title }}</span>
+								<span class="desc">{{ refer.desc }}</span>
+								<span class="star">{{ refer.descStar }}</span>
 							</a>
 						</li>
 					</ul>
@@ -43,13 +44,13 @@ export default {
 		const refers = ref([]); //이렇게 쓰면 자동으로 변수값이 변하면 그에 맞춰 저장됨
 		const references = () => {
 			fetch(
-				'https://webstoryboy.github.io/react2022/src/assets/json/refer.json',
+				'https://raw.githubusercontent.com/mbynae/react_api/main/src/utils/reference.json',
 				// 'https://mbynae.github.io/react_api/src/utils/reference.json',
 			)
 				.then(response => response.json())
-				// .then(result => console.log(result))
+				// .then(result => console.log(result.cssRefer))
 				// .then(result => console.log(result.data.htmlRefer))
-				.then(result => (refers.value = result.data.htmlRefer))
+				.then(result => (refers.value = result.cssRefer))
 				.catch(error => console.log('error', error));
 		};
 		references();
